@@ -1,0 +1,30 @@
+@layer components {
+  .header {
+    @apply bg-white relative overflow-hidden;
+  }
+
+  .left-curve {
+    left: 0;
+    top: 0;
+    @apply w-36 md:w-48 h-full;
+  }
+
+  .right-curve {
+    right: 0;
+    bottom: 0;
+    @apply w-44 md:w-56 h-full;
+  }
+
+  .inner {
+    @apply relative max-w-7xl mx-auto px-6 py-8 flex items-center justify-between;
+  }
+
+  .brand .gyd {
+    @apply text-red-600 font-bold;
+  }
+
+  /* Small visual tweaks to mimic the reference image */
+  .header svg path[fill^="url"] {
+    filter: drop-shadow(0 6px 18px rgba(0,0,0,0.12));
+  }
+}

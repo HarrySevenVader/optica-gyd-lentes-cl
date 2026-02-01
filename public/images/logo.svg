@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <defs>
+    <radialGradient id="rg" cx="30%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#ff5b5b"/>
+      <stop offset="100%" stop-color="#c70000"/>
+    </radialGradient>
+  </defs>
+  <rect width="200" height="200" rx="20" fill="white"/>
+  <path d="M0,40 C40,0 160,0 200,40 L200,200 L0,200 Z" fill="url(#rg)"/>
+  <text x="50%" y="62%" font-family="Arial, Helvetica, sans-serif" font-size="48" text-anchor="middle" fill="white" font-weight="700">GYD</text>
+</svg>

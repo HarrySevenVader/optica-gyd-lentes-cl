@@ -1,9 +1,15 @@
 import Header from "./components/header/page"
+import Hero from "./components/hero/page"
+import Nosotros from "./components/nosotros/page"
 
 export default function Page() {
   return (
-    <main className="min-h-screen bg-gray-100">
+    <>
       <Header />
-    </main>
+      <main className="min-h-screen bg-gray-100">
+        <Hero />
+        <Nosotros />
+      </main>
+    </>
   )
 }

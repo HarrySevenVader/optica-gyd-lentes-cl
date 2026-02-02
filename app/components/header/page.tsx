@@ -5,7 +5,7 @@ import Image from "next/image"
 
 export default function Header() {
 	return (
-		<header className="header relative overflow-hidden bg-white h-[80px] sm:h-[90px] md:h-[100px] lg:h-[110px]">
+		<header className="header overflow-hidden bg-white h-[80px] sm:h-[90px] md:h-[100px] lg:h-[110px]">
 			{/* Partículas izquierdas - ocultas en móvil */}
 			<div className="hidden sm:block absolute left-8 md:left-12 top-4 md:top-6 w-2 md:w-3 h-2 md:h-3 rounded-full bg-red-500/40 pointer-events-none" aria-hidden></div>
 			<div className="hidden sm:block absolute left-12 md:left-16 top-8 md:top-12 w-1.5 md:w-2 h-1.5 md:h-2 rounded-full bg-red-600/30 pointer-events-none" aria-hidden></div>

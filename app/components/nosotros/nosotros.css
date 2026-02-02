@@ -1,0 +1,344 @@
+/* Nosotros Section */
+.nosotros-section {
+  width: 100%;
+  background: linear-gradient(to bottom, #ffffff 0%, #f9fafb 100%);
+  padding: 6rem 0;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.nosotros-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.nosotros-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Header */
+.nosotros-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.nosotros-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+  color: #ef4444;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+}
+
+.nosotros-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.nosotros-title-accent {
+  color: #ef4444;
+}
+
+.nosotros-description {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #6b7280;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Stats Grid */
+.nosotros-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 5rem;
+}
+
+.nosotros-stat-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.nosotros-stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(239, 68, 68, 0.15);
+  border-color: #ef4444;
+}
+
+.nosotros-stat-number {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #ef4444;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.nosotros-stat-label {
+  font-size: 1rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* Content Grid */
+.nosotros-content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 5rem;
+}
+
+.nosotros-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.nosotros-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(239, 68, 68, 0.15);
+  border-color: #ef4444;
+}
+
+.nosotros-card-icon {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.nosotros-card:hover .nosotros-card-icon {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+}
+
+.nosotros-card-icon svg {
+  width: 32px;
+  height: 32px;
+  color: #ef4444;
+  transition: color 0.3s ease;
+}
+
+.nosotros-card:hover .nosotros-card-icon svg {
+  color: white;
+}
+
+.nosotros-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.nosotros-card-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #6b7280;
+}
+
+/* CTA Section */
+.nosotros-cta {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  padding: 4rem 3rem;
+  border-radius: 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.nosotros-cta::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  animation: pulse 8s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+.nosotros-cta-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.nosotros-cta-text {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.nosotros-cta-button {
+  background: white;
+  color: #ef4444;
+  padding: 1rem 3rem;
+  border-radius: 50px;
+  border: none;
+  font-size: 1.125rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.nosotros-cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  background: #f9fafb;
+}
+
+.nosotros-cta-icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.nosotros-cta-button:hover .nosotros-cta-icon {
+  transform: translateX(5px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nosotros-section {
+    padding: 4rem 0;
+  }
+
+  .nosotros-container {
+    padding: 0 1.5rem;
+  }
+
+  .nosotros-header {
+    margin-bottom: 3rem;
+  }
+
+  .nosotros-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .nosotros-description {
+    font-size: 1rem;
+  }
+
+  .nosotros-stats {
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .nosotros-stat-number {
+    font-size: 2.5rem;
+  }
+
+  .nosotros-content-grid {
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .nosotros-card {
+    padding: 2rem;
+  }
+
+  .nosotros-cta {
+    padding: 3rem 2rem;
+  }
+
+  .nosotros-cta-title {
+    font-size: 1.5rem;
+  }
+
+  .nosotros-cta-text {
+    font-size: 1rem;
+  }
+
+  .nosotros-cta-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .nosotros-section {
+    padding: 3rem 0;
+  }
+
+  .nosotros-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .nosotros-content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nosotros-badge {
+    font-size: 0.75rem;
+    padding: 0.4rem 1.2rem;
+  }
+
+  .nosotros-stat-number {
+    font-size: 2rem;
+  }
+
+  .nosotros-stat-label {
+    font-size: 0.875rem;
+  }
+
+  .nosotros-cta {
+    padding: 2.5rem 1.5rem;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .nosotros-section,
+  .nosotros-stat-card,
+  .nosotros-card,
+  .nosotros-cta-button {
+    animation: none !important;
+    transition: none !important;
+  }
+}

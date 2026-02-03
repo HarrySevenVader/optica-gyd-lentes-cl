@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 @import "tailwindcss";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-primary: 'Montserrat', system-ui, -apple-system, sans-serif;
 }
 
 @theme inline {
@@ -22,7 +24,29 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-primary);
+}
+
+/* Tipografía unificada para todo el sitio */
+h1, h2, h3, h4, h5, h6,
+.hero-title,
+.hero-title-accent,
+.header,
+.nav,
+button {
+  font-family: var(--font-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hero-title {
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.hero-title-accent {
+  font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
 /* Import component-specific styles (kept as separate .css files per component) */

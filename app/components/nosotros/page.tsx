@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import './nosotros.css'
 
 export default function Nosotros() {
@@ -29,113 +29,106 @@ export default function Nosotros() {
   }, [])
 
   return (
-    <section ref={sectionRef} className={`nosotros-section ${isVisible ? 'visible' : ''}`}>
+    <section ref={sectionRef} className={`nosotros-section ${isVisible ? 'visible' : ''}`} id="nosotros">
       <div className="nosotros-container">
-        {/* Header */}
-        <div className="nosotros-header">
-          <span className="nosotros-badge">Sobre Nosotros</span>
-          <h2 className="nosotros-title">
-            Tu Óptica de <span className="nosotros-title-accent">Confianza</span>
-          </h2>
-          <p className="nosotros-description">
-            En Óptica GYD llevamos años dedicados a cuidar tu salud visual con profesionalismo 
-            y compromiso. Ofrecemos productos de la más alta calidad y un servicio personalizado 
-            que se adapta a tus necesidades.
-          </p>
-        </div>
-
-        {/* Stats Grid */}
-        <div className="nosotros-stats">
-          <div className="nosotros-stat-card">
-            <div className="nosotros-stat-number">15+</div>
-            <div className="nosotros-stat-label">Años de Experiencia</div>
-          </div>
-          <div className="nosotros-stat-card">
-            <div className="nosotros-stat-number">5000+</div>
-            <div className="nosotros-stat-label">Clientes Satisfechos</div>
-          </div>
-          <div className="nosotros-stat-card">
-            <div className="nosotros-stat-number">500+</div>
-            <div className="nosotros-stat-label">Modelos Disponibles</div>
-          </div>
-          <div className="nosotros-stat-card">
-            <div className="nosotros-stat-number">100%</div>
-            <div className="nosotros-stat-label">Garantía de Calidad</div>
-          </div>
-        </div>
-
-        {/* Content Grid */}
-        <div className="nosotros-content-grid">
-          {/* Card 1 */}
-          <div className="nosotros-card">
-            <div className="nosotros-card-icon">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-              </svg>
+        <div className="nosotros-layout">
+          {/* Columna Izquierda: Imagen Placeholder (Futuro Carrusel) */}
+          <div className="nosotros-image-col">
+            <div className="nosotros-image-placeholder-container">
+              <div className="nosotros-image-placeholder">
+                <svg 
+                  className="nosotros-placeholder-icon" 
+                  fill="none" 
+                  viewBox="0 0 24 24" 
+                  stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <span className="nosotros-placeholder-text">Próximamente: Galería de Nuestros Lentes y Equipo</span>
+              </div>
+              {/* Elementos decorativos */}
+              <div className="nosotros-deco-circle"></div>
+              <div className="nosotros-deco-dots"></div>
             </div>
-            <h3 className="nosotros-card-title">Exámenes de la Vista</h3>
-            <p className="nosotros-card-text">
-              Realizamos exámenes completos de la vista con tecnología de última generación 
-              para garantizar un diagnóstico preciso.
-            </p>
           </div>
 
-          {/* Card 2 */}
-          <div className="nosotros-card">
-            <div className="nosotros-card-icon">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-              </svg>
+          {/* Columna Derecha: Contenido */}
+          <div className="nosotros-content-col">
+            <h2 className="nosotros-heading">
+              En <span className="nosotros-accent">Óptica GYD</span>, creemos que ver bien es <span className="nosotros-accent">vivir mejor.</span>
+            </h2>
+            
+            <p className="nosotros-lead">
+              Con años de trayectoria en el rubro óptico, nuestro compromiso es ayudarte a encontrar los lentes perfectos: 
+              que corrijan tu visión, reflejen tu personalidad y te hagan sentir increíble cada día.
+            </p>
+
+            <div className="nosotros-features-grid">
+              {/* Feature 1 */}
+              <div className="nosotros-feature-item">
+                <div className="nosotros-feature-icon-wrapper">
+                  <svg className="nosotros-feature-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div className="nosotros-feature-content">
+                  <h4 className="nosotros-feature-title">Visión perfecta, estilo único.</h4>
+                  <p className="nosotros-feature-desc">
+                    Combinamos salud visual con diseño para que te veas y te sientas increíble.
+                  </p>
+                </div>
+              </div>
+
+              {/* Feature 2 */}
+              <div className="nosotros-feature-item">
+                <div className="nosotros-feature-icon-wrapper">
+                  <svg className="nosotros-feature-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
+                  </svg>
+                </div>
+                <div className="nosotros-feature-content">
+                  <h4 className="nosotros-feature-title">Entrega rápida y atención personalizada.</h4>
+                  <p className="nosotros-feature-desc">
+                    Te acompañamos en cada paso y llevamos tus lentes hasta tu puerta.
+                  </p>
+                </div>
+              </div>
+
+              {/* Feature 3 */}
+              <div className="nosotros-feature-item">
+                <div className="nosotros-feature-icon-wrapper">
+                  <svg className="nosotros-feature-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                  </svg>
+                </div>
+                <div className="nosotros-feature-content">
+                  <h4 className="nosotros-feature-title">Tecnología óptica de última generación.</h4>
+                  <p className="nosotros-feature-desc">
+                    Cristales con tratamientos avanzados para una visión clara y confortable.
+                  </p>
+                </div>
+              </div>
+
+               {/* Feature 4 */}
+               <div className="nosotros-feature-item">
+                <div className="nosotros-feature-icon-wrapper">
+                  <svg className="nosotros-feature-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div className="nosotros-feature-content">
+                  <h4 className="nosotros-feature-title">Garantía total de satisfacción.</h4>
+                  <p className="nosotros-feature-desc">
+                    Tu comodidad es nuestra prioridad. Calidad asegurada en cada armazón y cristal.
+                  </p>
+                </div>
+              </div>
+
             </div>
-            <h3 className="nosotros-card-title">Garantía Extendida</h3>
-            <p className="nosotros-card-text">
-              Todos nuestros productos cuentan con garantía extendida para tu tranquilidad 
-              y seguridad en cada compra.
-            </p>
           </div>
-
-          {/* Card 3 */}
-          <div className="nosotros-card">
-            <div className="nosotros-card-icon">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
-              </svg>
-            </div>
-            <h3 className="nosotros-card-title">Marcas Premium</h3>
-            <p className="nosotros-card-text">
-              Trabajamos con las mejores marcas internacionales para ofrecerte productos 
-              de excelencia y estilo único.
-            </p>
-          </div>
-
-          {/* Card 4 */}
-          <div className="nosotros-card">
-            <div className="nosotros-card-icon">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-              </svg>
-            </div>
-            <h3 className="nosotros-card-title">Atención Personalizada</h3>
-            <p className="nosotros-card-text">
-              Nuestro equipo de profesionales te brinda asesoría experta y personalizada 
-              en cada visita.
-            </p>
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="nosotros-cta">
-          <h3 className="nosotros-cta-title">¿Listo para cuidar tu visión?</h3>
-          <p className="nosotros-cta-text">Agenda tu cita hoy y descubre la diferencia GYD</p>
-          <button className="nosotros-cta-button">
-            Agendar Cita Ahora
-            <svg className="nosotros-cta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
-          </button>
         </div>
       </div>
     </section>
   )
 }
+

@@ -50,45 +50,80 @@
   }
 }
 
-.nosotros-image-placeholder-container {
+/* Carrusel Wrapper */
+.nosotros-carousel-wrapper {
   position: relative;
   width: 100%;
   aspect-ratio: 3 / 4;
 }
 
-.nosotros-image-placeholder {
+.nosotros-carousel {
   width: 100%;
   height: 100%;
-  background-color: #f3f4f6;
   border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  text-align: center;
-  border: 2px dashed #d1d5db;
+  overflow: hidden;
   position: relative;
   z-index: 2;
+  background-color: #0f0f0f;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+}
+
+/* Fondo difuminado para rellenar espacios vacíos */
+.nosotros-carousel-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+/* Slide principal con imagen completa */
+.nosotros-carousel-slide {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 1;
+}
+
+.nosotros-carousel-slide.fade-in {
+  opacity: 1;
+}
+
+.nosotros-carousel-slide.fade-out {
+  opacity: 0;
+}
+
+/* Indicadores del carrusel */
+.nosotros-carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 1.25rem;
+  position: relative;
+  z-index: 3;
+}
+
+.nosotros-carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #d1d5db;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
   transition: all 0.3s ease;
 }
 
-.nosotros-image-placeholder:hover {
-  background-color: #e5e7eb;
-  border-color: #9ca3af;
+.nosotros-carousel-dot:hover {
+  border-color: #ef4444;
+  background-color: rgba(239, 68, 68, 0.2);
 }
 
-.nosotros-placeholder-icon {
-  width: 64px;
-  height: 64px;
-  color: #9ca3af;
-  margin-bottom: 1rem;
-}
-
-.nosotros-placeholder-text {
-  color: #6b7280;
-  font-weight: 500;
-  font-size: 0.95rem;
+.nosotros-carousel-dot.active {
+  background-color: #ef4444;
+  border-color: #ef4444;
+  transform: scale(1.2);
 }
 
 /* Elementos decorativos */
@@ -137,15 +172,15 @@
   font-size: 1.125rem;
   color: #4b5563;
   line-height: 1.7;
-  margin-bottom: 3.5rem;
+  margin-bottom: 2.5rem;
   max-width: 90%;
 }
 
-/* Features Grid */
+/* Features Grid - Estilo cuadrantes con cruz divisoria */
 .nosotros-features-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2.5rem;
+  gap: 0;
 }
 
 @media (min-width: 768px) {
@@ -157,7 +192,28 @@
 .nosotros-feature-item {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1rem;
+  padding: 2rem 1.75rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* Línea vertical en columna izquierda (desktop) */
+@media (min-width: 768px) {
+  .nosotros-feature-item:nth-child(odd) {
+    border-right: 1px solid #f0f0f0;
+  }
+
+  /* Quitar borde inferior de las últimas 2 celdas */
+  .nosotros-feature-item:nth-last-child(-n+2) {
+    border-bottom: none;
+  }
+}
+
+/* En mobile, quitar borde del último item */
+@media (max-width: 767px) {
+  .nosotros-feature-item:last-child {
+    border-bottom: none;
+  }
 }
 
 .nosotros-feature-icon-wrapper {
@@ -165,30 +221,31 @@
 }
 
 .nosotros-feature-icon {
-  width: 28px;
-  height: 28px;
-  color: #ef4444; 
-  /* Si prefieres un recuadro como en la ref: */
-  /* padding: 8px; border: 2px solid #ef4444; border-radius: 8px; */
+  width: 32px;
+  height: 32px;
+  color: #ffffff;
+  background-color: #ef4444;
+  border-radius: 6px;
+  padding: 5px;
 }
 
 .nosotros-feature-content {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.6rem;
 }
 
 .nosotros-feature-title {
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: #1f2937;
-  line-height: 1.3;
+  line-height: 1.35;
 }
 
 .nosotros-feature-desc {
   font-size: 0.95rem;
   color: #6b7280;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 /* Responsive adjustment for Mobile */

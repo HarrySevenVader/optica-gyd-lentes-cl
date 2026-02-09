@@ -13,10 +13,28 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Óptica GYD | Lentes Chile",
-  description: "Óptica GYD - Tu mejor opción en lentes y servicios ópticos en Chile",
+  title: "Óptica GYD | Lentes con Receta, Sol y Más en Santiago, Chile",
+  description: "Óptica GYD — Lentes ópticos, de sol, blue block y más a precios justos. Envíos a todo Chile. Atención personalizada en Santiago. Desde 2020.",
+  keywords: ["óptica", "lentes", "lentes de sol", "lentes con receta", "lentes blue block", "Santiago", "Chile", "envío a todo Chile", "Óptica GYD"],
   icons: {
     icon: "/images/logo-gyd.png",
+  },
+  openGraph: {
+    title: "Óptica GYD | Lentes de Calidad a Precios Justos",
+    description: "Lentes ópticos, de sol, blue block y más. Envíos a todo Chile. Atención personalizada en Santiago.",
+    url: "https://opticagyd.cl",
+    siteName: "Óptica GYD",
+    locale: "es_CL",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Óptica GYD | Lentes de Calidad a Precios Justos",
+    description: "Lentes ópticos, de sol, blue block y más. Envíos a todo Chile desde Santiago.",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

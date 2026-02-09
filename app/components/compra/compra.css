@@ -1,0 +1,207 @@
+/* ===== Sección Compra ===== */
+.compra-section {
+  width: 100%;
+  padding: 6rem 0;
+  background-color: #ffffff;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.compra-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.compra-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Header */
+.compra-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.compra-badge {
+  display: inline-block;
+  background: #fef2f2;
+  color: #dc2626;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.4rem 1.25rem;
+  border-radius: 50px;
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.02em;
+}
+
+.compra-title {
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 800;
+  color: #111827;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.compra-accent {
+  color: #dc2626;
+}
+
+.compra-subtitle {
+  font-size: 1.05rem;
+  color: #6b7280;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Steps Grid */
+.compra-steps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .compra-steps {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .compra-steps {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* Step Card */
+.compra-step {
+  position: relative;
+  background: #fafafa;
+  border-radius: 16px;
+  padding: 2rem 1.5rem 1.75rem;
+  text-align: center;
+  border: 1px solid transparent;
+}
+
+/* Connector line (desktop only) */
+.compra-step-connector {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .compra-step-connector {
+    display: block;
+    position: absolute;
+    top: 28px;
+    right: -1.5rem;
+    width: 1.5rem;
+    height: 2px;
+    background: linear-gradient(90deg, #fca5a5, transparent);
+  }
+}
+
+/* Step Number */
+.compra-step-number {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 28px;
+  height: 28px;
+  background: #dc2626;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+}
+
+/* Icon */
+.compra-step-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  color: #dc2626;
+}
+
+.compra-step-icon {
+  width: 56px;
+  height: 56px;
+}
+
+/* Content */
+.compra-step-titulo {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.6rem;
+}
+
+.compra-step-desc {
+  font-size: 0.88rem;
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+/* Métodos de pago */
+.compra-pago {
+  text-align: center;
+  padding-top: 2.5rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+.compra-pago-label {
+  font-size: 0.85rem;
+  color: #9ca3af;
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.compra-pago-methods {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.compra-pago-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #4b5563;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .compra-header {
+    margin-bottom: 3rem;
+  }
+
+  .compra-step {
+    padding: 1.75rem 1.25rem 1.5rem;
+  }
+
+  .compra-pago-methods {
+    gap: 1rem;
+  }
+
+  .compra-pago-item {
+    font-size: 0.8rem;
+  }
+}

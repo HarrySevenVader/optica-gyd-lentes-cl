@@ -59,7 +59,7 @@ export default function Ubicacion() {
             Visítanos en nuestra <span className="ubicacion-accent">tienda.</span>
           </h2>
           <p className="ubicacion-subtexto">
-            Ven a conocernos y prueba tus lentes antes de comprar. Te atendemos con la mejor disposición.
+            Ven a conocernos y prueba tus lentes antes de comprar.<br /> Te atendemos con la mejor disposición.
           </p>
         </div>
 

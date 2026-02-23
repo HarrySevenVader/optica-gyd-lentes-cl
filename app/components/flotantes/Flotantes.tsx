@@ -22,7 +22,7 @@ export default function Flotantes() {
     <div className="flotantes">
       {/* WhatsApp Gustavo */}
       <a
-        href="https://wa.me/56934293740"
+        href={`https://wa.me/56934293740?text=${encodeURIComponent('Hola Gustavo, vi la página de Óptica GYD y me gustaría cotizar unos lentes 👓')}`}
         target="_blank"
         rel="noopener noreferrer"
         className="flotante-wsp"
@@ -37,7 +37,7 @@ export default function Flotantes() {
 
       {/* WhatsApp Daniela */}
       <a
-        href="https://wa.me/56973980408"
+        href={`https://wa.me/56973980408?text=${encodeURIComponent('Hola Daniela, vi la página de Óptica GYD y me gustaría cotizar unos lentes 👓')}`}
         target="_blank"
         rel="noopener noreferrer"
         className="flotante-wsp"

@@ -186,6 +186,13 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
 }
 
+/* Posicionar el enlace "Ver en Google" en la esquina inferior izquierda
+   y evitar que se desborde. Reservamos espacio inferior con padding-bottom. */
+.resenas-card {
+  position: relative;
+  padding-bottom: 3rem; /* espacio para el botón fijo */
+}
+
 /* Card Header */
 .resenas-card-header {
   display: flex;
@@ -267,15 +274,22 @@
 .resenas-ver-google {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
   font-size: 0.75rem;
   font-weight: 600;
   color: #4285F4;
   text-decoration: none;
-  padding: 0.3rem 0.6rem;
+  padding: 0.36rem 0.7rem;
   border-radius: 50px;
   background: #eff6ff;
   transition: background 0.2s ease;
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  max-width: calc(100% - 2rem);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .resenas-ver-google:hover {

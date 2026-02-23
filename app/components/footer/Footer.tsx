@@ -65,7 +65,7 @@ export default function Footer() {
               </a>
               {/* WhatsApp */}
               <a
-                href="https://wa.me/56934293740"
+                href={`https://wa.me/56934293740?text=${encodeURIComponent('Hola, vi la página de Óptica GYD y quiero más información 👓')}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="footer-social-link"

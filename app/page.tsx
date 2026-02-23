@@ -1,6 +1,7 @@
 import Header from "./components/header/Header"
 import Hero from "./components/hero/Hero"
 import Nosotros from "./components/nosotros/Nosotros"
+import Demostraciones from "./components/demostraciones/Demostraciones"
 import Lentes from "./components/lentes/Lentes"
 import Compra from "./components/compra/Compra"
 import Resenas from "./components/resenas/Resenas"
@@ -16,6 +17,7 @@ export default function Page() {
         <Hero />
         <Nosotros />
         <Lentes />
+        <Demostraciones />
         <Compra />
         <Resenas />
         <Ubicacion />

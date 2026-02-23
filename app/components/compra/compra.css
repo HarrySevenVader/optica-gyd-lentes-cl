@@ -1,0 +1,346 @@
+/* ===== Sección Compra ===== */
+.compra-section {
+  width: 100%;
+  padding: 6rem 0;
+  background-color: #fafafa;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.compra-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.compra-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Header */
+.compra-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.compra-badge {
+  display: inline-block;
+  background: #fef2f2;
+  color: #dc2626;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.4rem 1.25rem;
+  border-radius: 50px;
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.02em;
+}
+
+.compra-title {
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 800;
+  color: #111827;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.compra-accent {
+  color: #dc2626;
+}
+
+.compra-subtitle {
+  font-size: 1.05rem;
+  color: #6b7280;
+  max-width: 620px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ── Grid de 2 columnas ── */
+.compra-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+@media (min-width: 768px) {
+  .compra-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+}
+
+/* ── Card base ── */
+.compra-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 2.25rem 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 8px 24px rgba(0, 0, 0, 0.04);
+  border: 1px solid #f0f0f0;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+/* Card header */
+.compra-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.compra-card-icon-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.compra-card-icon-circle--online {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.compra-card-icon-circle--presencial {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.compra-card-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #111827;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.compra-card-via {
+  font-size: 0.88rem;
+  color: #6b7280;
+  margin: 0.15rem 0 0;
+  font-weight: 500;
+}
+
+/* ── Pasos online ── */
+.compra-pasos-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.compra-paso-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.92rem;
+  color: #374151;
+  line-height: 1.55;
+}
+
+.compra-paso-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  min-width: 26px;
+  border-radius: 50%;
+  background: #dc2626;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-top: 1px;
+}
+
+.compra-paso-text {
+  flex: 1;
+}
+
+/* ── Contacto botones ── */
+.compra-contacto {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: auto;
+}
+
+.compra-contacto-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.15rem;
+  border-radius: 10px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.compra-contacto-btn--whatsapp {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.compra-contacto-btn--whatsapp:hover {
+  background: #bbf7d0;
+}
+
+.compra-contacto-btn--instagram {
+  background: #fce7f3;
+  color: #be185d;
+}
+
+.compra-contacto-btn--instagram:hover {
+  background: #fbcfe8;
+}
+
+/* ── Presencial ── */
+.compra-presencial-intro {
+  font-size: 0.93rem;
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.compra-presencial-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.compra-info-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  color: #374151;
+  line-height: 1.5;
+}
+
+.compra-info-row svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: #6b7280;
+}
+
+.compra-info-row--cita {
+  background: #fefce8;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #fef08a;
+  color: #854d0e;
+}
+
+.compra-info-row--cita svg {
+  color: #ca8a04;
+}
+
+/* ── Beneficios ── */
+.compra-beneficios {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.compra-beneficio-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.88rem;
+  color: #374151;
+  line-height: 1.5;
+}
+
+.compra-beneficio-item svg {
+  flex-shrink: 0;
+  color: #16a34a;
+  margin-top: 2px;
+}
+
+/* ── Mapa ── */
+.compra-mapa {
+  margin-top: auto;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.compra-mapa iframe {
+  display: block;
+}
+
+/* ── Métodos de pago ── */
+.compra-pago {
+  text-align: center;
+  padding-top: 2.5rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.compra-pago-label {
+  font-size: 0.85rem;
+  color: #9ca3af;
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.compra-pago-methods {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.compra-pago-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #4b5563;
+  font-weight: 500;
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .compra-section {
+    padding: 4rem 0;
+  }
+
+  .compra-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .compra-card {
+    padding: 1.75rem 1.5rem;
+  }
+
+  .compra-pago-methods {
+    gap: 1rem;
+  }
+
+  .compra-pago-item {
+    font-size: 0.8rem;
+  }
+
+  .compra-contacto {
+    flex-direction: column;
+  }
+
+  .compra-contacto-btn {
+    justify-content: center;
+  }
+}

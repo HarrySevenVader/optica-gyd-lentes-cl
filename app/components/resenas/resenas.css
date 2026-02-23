@@ -1,0 +1,312 @@
+/* ===== Sección Reseñas ===== */
+.resenas-section {
+  width: 100%;
+  padding: 6rem 0;
+  background-color: #f9fafb;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.resenas-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.resenas-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Header */
+.resenas-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.resenas-google-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 50px;
+  padding: 0.45rem 1.25rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #4b5563;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.resenas-google-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.resenas-title {
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 800;
+  color: #111827;
+  line-height: 1.2;
+}
+
+.resenas-accent {
+  color: #dc2626;
+}
+
+/* Resumen de calificación */
+.resenas-resumen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  background: #ffffff;
+  border: 1px solid #f0f0f0;
+  border-radius: 16px;
+  padding: 2rem 2.5rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.resenas-resumen-barras {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  max-width: 240px;
+}
+
+.resenas-resumen-fila {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.resenas-resumen-num {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #6b7280;
+  width: 12px;
+  text-align: right;
+}
+
+.resenas-resumen-barra-bg {
+  flex: 1;
+  height: 10px;
+  background: #e5e7eb;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.resenas-resumen-barra-fill {
+  height: 100%;
+  background: #facc15;
+  border-radius: 50px;
+  transition: width 1s ease-out;
+}
+
+.resenas-resumen-nota {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.resenas-resumen-numero {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #111827;
+  line-height: 1;
+}
+
+.resenas-resumen-stars {
+  display: flex;
+  gap: 2px;
+}
+
+.resenas-resumen-count {
+  font-size: 0.82rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+@media (max-width: 480px) {
+  .resenas-resumen {
+    flex-direction: column-reverse;
+    gap: 1.25rem;
+    padding: 1.5rem;
+    max-width: 100%;
+  }
+
+  .resenas-resumen-barras {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .resenas-resumen-numero {
+    font-size: 2.2rem;
+  }
+}
+
+/* Grid 3 columnas */
+.resenas-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .resenas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .resenas-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.resenas-grid:last-child {
+  margin-bottom: 0;
+}
+
+/* Card */
+.resenas-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 1.5rem;
+  border: 1px solid #f0f0f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+/* Posicionar el enlace "Ver en Google" en la esquina inferior izquierda
+   y evitar que se desborde. Reservamos espacio inferior con padding-bottom. */
+.resenas-card {
+  position: relative;
+  padding-bottom: 3rem; /* espacio para el botón fijo */
+}
+
+/* Card Header */
+.resenas-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.85rem;
+}
+
+/* Avatar */
+.resenas-avatar {
+  flex-shrink: 0;
+}
+
+.resenas-avatar-img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.resenas-avatar-inicial {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #dc2626, #f87171);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+/* Info */
+.resenas-card-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.resenas-card-nombre {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1f2937;
+  line-height: 1.3;
+}
+
+.resenas-card-fecha {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+/* Google icon en la card */
+.resenas-card-google {
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
+/* Estrellas */
+.resenas-stars {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 0.75rem;
+}
+
+.resenas-star {
+  width: 16px;
+  height: 16px;
+}
+
+/* Texto */
+.resenas-card-texto {
+  font-size: 0.9rem;
+  color: #4b5563;
+  line-height: 1.65;
+  margin-bottom: 1rem;
+}
+
+/* Mini botón Ver en Google */
+.resenas-ver-google {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #4285F4;
+  text-decoration: none;
+  padding: 0.36rem 0.7rem;
+  border-radius: 50px;
+  background: #eff6ff;
+  transition: background 0.2s ease;
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  max-width: calc(100% - 2rem);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.resenas-ver-google:hover {
+  background: #dbeafe;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .resenas-section {
+    padding: 4rem 0;
+  }
+
+  .resenas-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .resenas-card {
+    padding: 1.25rem;
+  }
+}

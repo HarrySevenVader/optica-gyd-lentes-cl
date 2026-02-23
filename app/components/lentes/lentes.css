@@ -1,0 +1,202 @@
+/* ===== Sección Lentes ===== */
+.lentes-section {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 50%, #991b1b 100%);
+  padding: 5rem 0;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+  overflow: hidden;
+}
+
+.lentes-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fondo decorativo sutil */
+.lentes-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+/* Ondas */
+.lentes-wave-top,
+.lentes-wave-bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  line-height: 0;
+  pointer-events: none;
+}
+
+.lentes-wave-top {
+  top: -1px;
+}
+
+.lentes-wave-bottom {
+  bottom: -1px;
+}
+
+.lentes-wave-top svg,
+.lentes-wave-bottom svg {
+  display: block;
+  width: 100%;
+  height: 50px;
+}
+
+@media (min-width: 768px) {
+  .lentes-wave-top svg,
+  .lentes-wave-bottom svg {
+    height: 70px;
+  }
+}
+
+/* Inner */
+.lentes-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Header */
+.lentes-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.lentes-title {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+
+.lentes-subtitle {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Carousel Area */
+.lentes-carousel-area {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Flechas */
+.lentes-arrow {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.lentes-arrow:hover {
+  background: rgba(255, 255, 255, 0.35);
+  transform: scale(1.1);
+}
+
+.lentes-arrow.hidden-arrow {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* Ocultar flechas en mobile, scroll nativo */
+@media (max-width: 640px) {
+  .lentes-arrow {
+    display: none;
+  }
+}
+
+/* Carrusel scroll horizontal */
+.lentes-carousel {
+  display: flex;
+  gap: 1.25rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 0.5rem 0;
+  flex: 1;
+}
+
+.lentes-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* Cards */
+.lentes-card {
+  flex: 0 0 260px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  scroll-snap-align: start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.lentes-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15);
+}
+
+.lentes-card-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.lentes-card-icon {
+  width: 72px;
+  height: 72px;
+}
+
+.lentes-card-nombre {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.lentes-card-desc {
+  font-size: 0.9rem;
+  color: #6b7280;
+  line-height: 1.55;
+}
+
+/* Responsive cards width */
+@media (max-width: 480px) {
+  .lentes-card {
+    flex: 0 0 220px;
+    padding: 1.5rem 1.25rem;
+  }
+
+  .lentes-card-icon {
+    width: 60px;
+    height: 60px;
+  }
+}

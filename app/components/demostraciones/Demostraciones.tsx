@@ -17,20 +17,32 @@ import lentes9 from '@/app/images/lentes9.png'
 import lentes10 from '@/app/images/lentes10.png'
 import lentes11 from '@/app/images/lentes11.png'
 import lentes12 from '@/app/images/lentes12.png'
+import lentes13 from '@/app/images/lentes13.jpeg'
+import lentes14 from '@/app/images/lentes14.jpeg'
+import lentes15 from '@/app/images/lentes15.jpeg'
+import lentes16 from '@/app/images/lentes16.jpeg'
+import lentes17 from '@/app/images/lentes17.jpeg'
+import lentes18 from '@/app/images/lentes18.jpeg'
 
 const fotos = [
-  { src: lentes1, alt: 'Lentes modelo 1', filename: 'lentes1.png' },
-  { src: lentes2, alt: 'Lentes modelo 2', filename: 'lentes2.png' },
-  { src: lentes3, alt: 'Lentes modelo 3', filename: 'lentes3.png' },
-  { src: lentes4, alt: 'Lentes modelo 4', filename: 'lentes4.png' },
-  { src: lentes5, alt: 'Lentes modelo 5', filename: 'lentes5.png' },
-  { src: lentes6, alt: 'Lentes modelo 6', filename: 'lentes6.png' },
-  { src: lentes7, alt: 'Lentes modelo 7', filename: 'lentes7.png' },
-  { src: lentes8, alt: 'Lentes modelo 8', filename: 'lentes8.png' },
-  { src: lentes9, alt: 'Lentes modelo 9', filename: 'lentes9.png' },
-  { src: lentes10, alt: 'Lentes modelo 10', filename: 'lentes10.png' },
-  { src: lentes11, alt: 'Lentes modelo 11', filename: 'lentes11.png' },
-  { src: lentes12, alt: 'Lentes modelo 12', filename: 'lentes12.png' },
+  { id: 0, src: lentes1, alt: 'Lentes modelo 1', filename: 'lentes1.png' },
+  { id: 1, src: lentes2, alt: 'Lentes modelo 2', filename: 'lentes2.png' },
+  { id: 2, src: lentes3, alt: 'Lentes modelo 3', filename: 'lentes3.png' },
+  { id: 3, src: lentes4, alt: 'Lentes modelo 4', filename: 'lentes4.png' },
+  { id: 4, src: lentes5, alt: 'Lentes modelo 5', filename: 'lentes5.png' },
+  { id: 5, src: lentes6, alt: 'Lentes modelo 6', filename: 'lentes6.png' },
+  { id: 6, src: lentes7, alt: 'Lentes modelo 7', filename: 'lentes7.png' },
+  { id: 7, src: lentes8, alt: 'Lentes modelo 8', filename: 'lentes8.png' },
+  { id: 8, src: lentes9, alt: 'Lentes modelo 9', filename: 'lentes9.png' },
+  { id: 9, src: lentes10, alt: 'Lentes modelo 10', filename: 'lentes10.png' },
+  { id: 10, src: lentes11, alt: 'Lentes modelo 11', filename: 'lentes11.png' },
+  { id: 11, src: lentes12, alt: 'Lentes modelo 12', filename: 'lentes12.png' },
+  { id: 12, src: lentes13, alt: 'Lentes modelo 13', filename: 'lentes13.jpeg' },
+  { id: 13, src: lentes14, alt: 'Lentes modelo 14', filename: 'lentes14.jpeg' },
+  { id: 14, src: lentes15, alt: 'Lentes modelo 15', filename: 'lentes15.jpeg' },
+  { id: 15, src: lentes16, alt: 'Lentes modelo 16', filename: 'lentes16.jpeg' },
+  { id: 16, src: lentes17, alt: 'Lentes modelo 17', filename: 'lentes17.jpeg' },
+  { id: 17, src: lentes18, alt: 'Lentes modelo 18', filename: 'lentes18.jpeg' },
 ]
 
 const catalogos = [
@@ -117,11 +129,12 @@ export default function Demostraciones() {
         {/* Carrusel infinito - 2 filas */}
         <div className="demo-carousel-wrapper">
           {[0, 1].map((row) => {
-            const rowFotos = row === 0 ? fotos.slice(0, 6) : fotos.slice(6)
+            // distribuir las fotos alternando índices para equilibrar las dos filas
+            const rowFotos = row === 0 ? fotos.filter((_, i) => i % 2 === 0) : fotos.filter((_, i) => i % 2 === 1)
             return (
               <div key={row} className={`demo-carousel-track ${row === 1 ? 'demo-carousel-track--reverse' : ''}`}>
                 {[...rowFotos, ...rowFotos, ...rowFotos].map((foto, i) => {
-                  const realIndex = fotos.indexOf(foto)
+                  const realIndex = foto.id ?? fotos.indexOf(foto)
                   return (
                     <div
                       key={`${row}-${i}`}

@@ -2,6 +2,7 @@
 
 import React from 'react'
 import './footer.css'
+import { businessConfig, contactConfig } from '@/app/lib/siteConfig'
 
 /*
   ============================================================
@@ -65,7 +66,7 @@ export default function Footer() {
               </a>
               {/* WhatsApp */}
               <a
-                href={`https://wa.me/56934293740?text=${encodeURIComponent('Hola, vi la página de Óptica GYD y quiero más información 👓')}`}
+                href={`https://wa.me/${contactConfig.whatsappNumber}?text=${encodeURIComponent('Hola, vi la pagina de Optica GYD y quiero mas informacion :)')}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="footer-social-link"
@@ -95,19 +96,19 @@ export default function Footer() {
             <h4>Contacto</h4>
             <ul className="footer-links">
               <li>
-                <a href="tel:+56934293740">
+                {/*<a href="tel:+56934293740">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
                   </svg>
                   Gustavo: +56 9 3429 3740
-                </a>
+                </a>*/}
               </li>
               <li>
-                <a href="tel:+56973980408">
+                <a href={`tel:${contactConfig.phoneE164}`}>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
                   </svg>
-                  Daniela: +56 9 7398 0408
+                  Atencion al cliente: {contactConfig.phoneDisplay}
                 </a>
               </li>
               <li>
@@ -116,7 +117,7 @@ export default function Footer() {
                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
                     <circle cx="12" cy="10" r="3" />
                   </svg>
-                  Agustinas #681, Of. 1205
+                  {businessConfig.address}
                 </a>
               </li>
             </ul>

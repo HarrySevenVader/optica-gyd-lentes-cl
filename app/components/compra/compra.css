@@ -166,42 +166,20 @@
   flex: 1;
 }
 
-/* ── Contacto botones ── */
-.compra-contacto {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
+/* ── Mascota card online ── */
+.compra-online-mascota {
   margin-top: auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-top: 1rem;
 }
 
-.compra-contacto-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.6rem 1.15rem;
-  border-radius: 10px;
-  font-size: 0.88rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.2s ease;
-}
-
-.compra-contacto-btn--whatsapp {
-  background: #dcfce7;
-  color: #15803d;
-}
-
-.compra-contacto-btn--whatsapp:hover {
-  background: #bbf7d0;
-}
-
-.compra-contacto-btn--instagram {
-  background: #fce7f3;
-  color: #be185d;
-}
-
-.compra-contacto-btn--instagram:hover {
-  background: #fbcfe8;
+.compra-online-mascota-img {
+  width: min(100%, 250px);
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.08));
 }
 
 /* ── Presencial ── */
@@ -336,11 +314,11 @@
     font-size: 0.8rem;
   }
 
-  .compra-contacto {
-    flex-direction: column;
+  .compra-online-mascota {
+    padding-top: 0.5rem;
   }
 
-  .compra-contacto-btn {
-    justify-content: center;
+  .compra-online-mascota-img {
+    width: min(100%, 190px);
   }
 }

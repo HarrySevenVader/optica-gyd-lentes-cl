@@ -91,6 +91,7 @@ export default function Header() {
 					<a className="link hover:text-gray-900 transition-colors" href="#hero">Inicio</a>
 					<a className="link hover:text-gray-900 transition-colors" href="#nosotros">Nosotros</a>
 					<a className="link hover:text-gray-900 transition-colors" href="#lentes">Lentes</a>
+					<a className="link hover:text-gray-900 transition-colors" href="#compra">Como comprar</a>
 					<a className="link hover:text-gray-900 transition-colors" href="#resenas">Reseñas</a>
 					<a className="link hover:text-gray-900 transition-colors" href="#ubicacion">Ubicación</a>
 				</nav>
@@ -138,6 +139,7 @@ export default function Header() {
 						{ label: 'Inicio', href: '#hero' },
 						{ label: 'Nosotros', href: '#nosotros' },
 						{ label: 'Lentes', href: '#lentes' },
+						{ label: 'Como comprar', href: '#compra' },
 						{ label: 'Reseñas', href: '#resenas' },
 						{ label: 'Ubicación', href: '#ubicacion' },
 					].map((item) => (

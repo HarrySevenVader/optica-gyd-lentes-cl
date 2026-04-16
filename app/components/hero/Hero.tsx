@@ -82,6 +82,12 @@ export default function Hero() {
             Tecnología de vanguardia y diseños únicos para tu estilo de vida.
           </p>
 
+          <div className="hero-cta-container">
+            <a href="#demostraciones" className="hero-cta hero-cta-secondary">
+              Ver modelos
+            </a>
+          </div>
+
           {/* Características destacadas */}
           <div className="hero-features">
             <div className="hero-feature">

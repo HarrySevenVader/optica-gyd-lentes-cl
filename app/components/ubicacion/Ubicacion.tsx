@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react'
 import './ubicacion.css'
+import { businessConfig, contactConfig } from '@/app/lib/siteConfig'
 
 /*
   ============================================================
@@ -98,7 +99,7 @@ export default function Ubicacion() {
               </div>
               <div className="ubicacion-info-text">
                 <h4>Dirección</h4>
-                <p>Agustinas #681, Of. 1205, Santiago, Chile</p>
+                <p>{businessConfig.address}</p>
               </div>
             </div>
 
@@ -112,8 +113,8 @@ export default function Ubicacion() {
               </div>
               <div className="ubicacion-info-text">
                 <h4>Horario de atención</h4>
-                <p>Lunes a Viernes: 10:30 - 17:30</p>
-                <p>Sábado: 10:30 - 16:30</p>
+                <p>{businessConfig.openingHours.weekdays}</p>
+                <p>{businessConfig.openingHours.saturday}</p>
               </div>
             </div>
 
@@ -126,8 +127,7 @@ export default function Ubicacion() {
               </div>
               <div className="ubicacion-info-text">
                 <h4>Contáctanos</h4>
-                <p>Gustavo: +56 9 3429 3740</p>
-                <p>Daniela: +56 9 7398 0408</p>
+                <p>Atencion al cliente: {contactConfig.phoneDisplay}</p>
               </div>
             </div>
           </div>

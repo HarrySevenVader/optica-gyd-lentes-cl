@@ -128,8 +128,9 @@ export default function Footer() {
             <h4>Catálogos</h4>
             <ul className="footer-links">
               <li><a href="https://www.canva.com/design/DAFxt4JFjmY/C2WOGSStJr9l0w1xMVdbsw/view?utm_content=DAFxt4JFjmY&utm_campaign=designshare&utm_medium=link&utm_source=editor" target="_blank" rel="noopener noreferrer">Catálogo Dama</a></li>
-              <li><a href="https://www.canva.com/design/DAFx0Evy1hE/Uc082m-azmNJp2FLI-1Uvw/view?utm_content=DAFx0Evy1hE&utm_campaign=designshare&utm_medium=link&utm_source=editor" target="_blank" rel="noopener noreferrer">Catálogo Varón</a></li>
+              <li><a href="https://canva.link/catalogovarongyd" target="_blank" rel="noopener noreferrer">Catálogo Varón</a></li>
               <li><a href="https://www.canva.com/design/DAFxKM4XE0Y/eweCq5ouqs7dW9LEZavgQA/view?utm_content=DAFxKM4XE0Y&utm_campaign=designshare&utm_medium=link&utm_source=editor" target="_blank" rel="noopener noreferrer">Catálogo Clip On</a></li>
+              <li><a href="https://canva.link/rbkfije7tenafmh" target="_blank" rel="noopener noreferrer">Catálogo Infantil</a></li>
             </ul>
 
             {LINKTREE_URL && (

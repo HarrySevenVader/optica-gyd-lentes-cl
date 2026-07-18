@@ -47,8 +47,9 @@ const fotos = [
 
 const catalogos = [
   { label: 'Catálogo Dama', href: 'https://www.canva.com/design/DAFxt4JFjmY/C2WOGSStJr9l0w1xMVdbsw/view?utm_content=DAFxt4JFjmY&utm_campaign=designshare&utm_medium=link&utm_source=editor' },
-  { label: 'Catálogo Varón', href: 'https://www.canva.com/design/DAFx0Evy1hE/Uc082m-azmNJp2FLI-1Uvw/view?utm_content=DAFx0Evy1hE&utm_campaign=designshare&utm_medium=link&utm_source=editor' },
+  { label: 'Catálogo Varón', href: 'https://canva.link/catalogovarongyd' },
   { label: 'Catálogo Clip On', href: 'https://www.canva.com/design/DAFxKM4XE0Y/eweCq5ouqs7dW9LEZavgQA/view?utm_content=DAFxKM4XE0Y&utm_campaign=designshare&utm_medium=link&utm_source=editor' },
+  { label: 'Catálogo Infantil', href: 'https://canva.link/rbkfije7tenafmh' },
 ]
 
 export default function Demostraciones() {
